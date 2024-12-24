@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 125vh;
+    width: 100%;
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100vh;
+        width: 90%;
+        .left{
+            width: 45%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            .image{
+                height: 60%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img{
+                    width: 60%;
+                }
+            }
+            .adoptText{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                p{
+                    color: grey;
+                    font-size: 18px;
+                }
+                button{
+                    width: 170px;
+                    padding: 18px;
+                    font-size: 15px;
+                    border: 2px solid orangered;
+                    color: orangered;
+                    cursor: pointer;
+                }
+
+            }
+        }
+        .right{
+            width: 47%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+            .steps{
+                height: 15%;
+            }
+            .stepsList{
+                width: 100%;
+                height: 85%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                ol{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                    width: 100%;
+                    list-style: none;
+                    li{
+                        padding: 10px;
+                        width: 80%;
+                        border: 1px solid grey;
+                        a{
+                            color: black;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:576px){
+    .section{
+        height: auto;
+        .container{
+            height: auto;
+            width: 100%;
+            flex-direction: column;
+            gap: 35px;
+            .right{
+                width: 100%;
+            }
+            .left{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    }
+}
