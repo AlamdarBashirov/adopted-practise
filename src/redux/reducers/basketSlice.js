@@ -31,6 +31,18 @@ export const basketSlice = createSlice({
         state.loading = false
         state.error = action.error.message
     })
+    //delete basket
+    .addCase(deleteProductsBasketThunk.fulfilled, (state, action) => {
+        state.loading = false
+        state.basket = state.basket.filter(item => item.id !== action.payload)
+    })
+    .addCase(deleteProductsBasketThunk.pending, (state) => {
+        state.loading = true
+    })
+    .addCase(deleteProductsBasketThunk.rejected, (state, action) => {
+        state.loading = false
+        state.error = action.error.message
+    })
 })
 
 export default basketSlice.reducer

@@ -31,10 +31,10 @@ const Header = () => {
         </div>
         <div className={style.navigation}>
           <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Adoption</a></li>
-            <li><a href="">Succes Stories</a></li>
-            <li><a href="">About</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/basket">Basket</a></li>
+            <li><a href="/wishlist">Wishlist</a></li>
+            <li><a href="/admin">Admin</a></li>
             <li><a href="">Contact</a></li>
           </ul>
           <GiHamburgerMenu className={style.burger} />

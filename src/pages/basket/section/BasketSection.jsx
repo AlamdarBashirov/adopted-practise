@@ -25,8 +25,8 @@ const BasketSection = () => {
 
 
   return (
-    <div>
-        <div>
+    <div className={style.section}>
+        <div className={style.container}>
             { products && products.map((item) => <BasketCard item={item} deleteItem={() => deleteItem(item.id)} />)}
         </div>
     </div>

@@ -1,5 +1,38 @@
 .card{
-    border: 1px solid black;
     margin: 15px;
     width: 30%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    transition: .4s;
+    &:hover{
+        -webkit-box-shadow: 10px 10px 5px 11px rgba(0,0,0,0.76);
+        -moz-box-shadow: 10px 10px 5px 11px rgba(0,0,0,0.76);
+        box-shadow: 10px 10px 5px 11px rgba(0,0,0,0.76);
+        padding: 20px 30px;
+        transition: .4s;
+    }
+    .buttons{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 15px;
+        button{
+            padding: 10px 20px;
+            background-color: transparent;
+            color: orangered;
+            border: 2px solid orangered;
+            cursor: pointer;
+            transition: .4s;
+            &:hover{
+                color: white;
+                transition: .4s;
+                background-color: orangered;
+            }
+        }
+    }
 }
