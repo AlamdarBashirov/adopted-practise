@@ -4,7 +4,7 @@ import style from './AdminCard.module.scss'
 const AdminCard = ({item, deleteItem, addItem}) => {
   return (
     <div className={style.card}>
-        <img src={item.thumbnail} alt="" />
+        <img src={item.image} alt="" />
         <p>{item.title}</p>
         <p>{item.price}</p>
         <div className={style.buttons}>

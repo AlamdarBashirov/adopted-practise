@@ -8,6 +8,10 @@
     flex-direction: column;
     gap: 10px;
     transition: .4s;
+
+    img {
+        width: 100%;
+    }
     &:hover{
         -webkit-box-shadow: 10px 10px 5px 11px rgba(0,0,0,0.76);
         -moz-box-shadow: 10px 10px 5px 11px rgba(0,0,0,0.76);

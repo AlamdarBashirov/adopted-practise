@@ -2,17 +2,17 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const getProductsAdminPanelThunk = createAsyncThunk('api/adminPanel', async () => {
-    const response = await axios.get('http://dummyjson.com/products')
-    return response.data.products
+    const response = await axios.get('http://localhost:5050/products/')
+    return response.data
 })
 
 export const deleteItemFromAdminPanelThunk = createAsyncThunk('api/adminPanel/delete', async (id) => {
-    const response = axios.delete(`http://localhost:5000/products/${id}`)
+    const response = await axios.delete(`http://localhost:5050/products/${id}`)
     return id
 })
 
 export const addToPageFromAdminThunk = createAsyncThunk('api/adminPanel/sendToPage', async (data) => {
-    const response = await axios.post("http://localhost:5000/products", {...data,id: data.id.toString()})
+    const response = await axios.post("http://localhost:5050/products", data)
     return data
 })
 
@@ -43,7 +43,7 @@ export const adminSlice = createSlice({
     //delete admin products
     .addCase(deleteItemFromAdminPanelThunk.fulfilled, (state, action) => {
         state.loading = false
-        state.admin = state.admin.filter(item => item.id !== action.payload)
+        state.admin = state.admin.filter(item => item._id !== action.payload)
     })
     .addCase(deleteItemFromAdminPanelThunk.pending, (state) => {
         state.loading = true

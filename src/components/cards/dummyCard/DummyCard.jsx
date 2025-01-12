@@ -1,10 +1,10 @@
 import React from 'react'
 import style from './DummyCard.module.scss'
 
-const DummyCard = ({item, AddBasket, AddWishlist}) => {
+const DummyCard = ({item, AddBasket, AddWishlist, goDetail}) => {
   return (
-    <div className={style.card}>
-        <img src={item.thumbnail} alt="" />
+    <div className={style.card} onClick={goDetail}>
+        <img src={item.image} alt="" />
         <p>{item.title}</p>
         <p>${item.price}</p>
         <div className={style.buttons}>
